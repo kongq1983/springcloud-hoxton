@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: peer3  # 这个不指定 eureka会UNKNOWN
+
+server:
+  port: 8763
+eureka:
+  instance:
+    hostname: peer3.com
+  client:
+    serviceUrl:
+      defaultZone: http://peer1.com:8761/eureka/,http://peer2.com:8762/eureka/
